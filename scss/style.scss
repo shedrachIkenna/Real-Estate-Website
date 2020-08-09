@@ -1,0 +1,245 @@
+
+$black: #181010;
+$white: #fafafa;
+$dark-grey: #3f373a;
+$light-grey: #65635D;
+$ash: #A4a3a3;
+$brown: #f6cc99;
+$dark-brown: #917D68;
+
+
+//  Global Classes
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1200px;
+    // border: 1px solid red;
+    margin: auto;
+    padding: 0 10px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: $white;
+}
+
+li{
+    list-style: none;
+}
+
+.btn-link{
+    border: none;
+    padding: 6px 30px;
+    border-radius: 50px;
+    background-color: $brown;
+    color: $black;
+}
+
+
+
+
+// Global Classes Ends Here>>>
+
+/*--Note: I'm using SASS, it allows me to target some elements by nesting... SO COOL!! */
+
+body{
+    font-size: 16px;
+    font-family:cursive;
+    background-color: $white;
+
+    
+    /*--- Header + Nav ---*/
+    main{
+        background-image: url('/images/house.jpg');
+        background-size: contain;
+        background-position: center;
+        height: 70vh;
+
+    }
+
+    .over{
+        background-color: rgba($color: $light-grey, $alpha: 0.4);
+        height: 70vh;
+    }
+
+    header{
+        position: relative;
+        .header-container{
+        display: flex;
+        justify-content: space-between;
+
+        #logo{
+            margin: 1.6rem 0rem;
+            font-size: 18px;
+        }
+
+        #navbar{
+
+                ul{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    li{
+                        margin: 1.6rem 1rem;
+
+                        @media screen and(max-width: 760px){
+                            display: none;
+                        }
+
+                        a{
+                            font-size: 13px;
+                        }
+                    }
+
+
+                    /*-------Hamburger Menu --------*/ 
+
+
+                        
+                        #hamburger{
+                            margin-top: 25px;
+                            width: 35px;
+                            height: 33px;
+                            cursor: pointer;
+                            margin-right: 10px;
+                            z-index: 2;
+                            
+                            @media screen and (min-width: 760px){
+                                display: none;
+                            }
+                        }
+
+                        .bar{
+                            background-color: $white;
+                            height: 5px;
+                            width: 100%;
+                            display: block;
+                            border-radius: 5px;
+                            margin: 3px 3px 0px 0px;
+                            transition: 0.3s ease;
+                        }
+
+                        .bar-1{
+                            transform: translateY(-4px)
+                
+                        }
+
+                        .bar-3{
+                            transform: translateY(4px)
+                        }
+
+                        .changed .bar{
+                            background-color: $white;
+                        }
+
+                        .changed .bar-1{
+                            transform: translateY(10px) rotate(45deg)
+                        }
+
+                        .changed .bar-3{
+                            transform: translateY(-6px) rotate(-45deg)
+                        }
+
+                        .changed .bar-2 {
+                            opacity: 0;
+                        }
+                        
+
+
+                    /*-------Hamburger Menu Ends Here -----*/
+                }
+
+            }
+        }
+
+
+
+        /*-----Side Menu ------*/
+
+            .menu{
+                position: absolute;
+                right: 2%;
+                padding: 2px 15px;
+                transition: 0.8 ease;
+                z-index: 2;
+                
+                li{
+                    padding: 10px 0;
+
+                    a{
+                        transition: .3s ease-in-out;
+                    }
+                }
+
+               
+
+                a:hover{
+                    font-weight: bold;
+                }
+            }
+
+
+            .remove-menu{
+                display: none;
+            }
+
+
+        /*-------side Menu Ends here---------*/
+
+        .menu-bg{
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, #f6cc99, #917D68);
+            box-shadow: 0px 3px 15px rgba($color: $dark-grey, $alpha: 0.4);
+            transition: 0.3s ease;
+            top: 0;
+            right: 0;
+            position: absolute;
+            z-index: 1;
+            border-radius: 50%;
+            margin-top: 25px;
+            margin-right: 19px;
+        }
+
+
+        .change-bg{
+            width: 550px;
+            height: 540px;
+            transform: translate(63%, -30%);
+        }
+
+    }
+
+
+    #showcase{
+        color: $white;
+        margin-top: 35px;
+
+        .text-box{
+            width: 50%;
+            h1{
+                font-size: 3.2rem;
+                text-align: left;
+                line-height: 1.1;
+                font-family: 'Segoe UI','Open Sans', 'Helvetica Neue', sans-serif
+            }
+
+            p{
+                margin-top: 40px;
+                font-size: 14px;
+            }
+        }
+    }
+
+}
+
