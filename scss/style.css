@@ -7,6 +7,7 @@
 
 .container {
   max-width: 1200px;
+  width: 90%;
   margin: auto;
   padding: 0 10px;
 }
@@ -17,7 +18,6 @@ ul {
 
 a {
   text-decoration: none;
-  color: #fafafa;
 }
 
 li {
@@ -27,9 +27,13 @@ li {
 .btn-link {
   border: none;
   padding: 6px 30px;
-  border-radius: 50px;
+  border-radius: 5px;
   background-color: #f6cc99;
   color: #181010;
+}
+
+.fa-angle-double-down {
+  color: #f6cc99;
 }
 
 /*--Note: I'm using SASS, it allows me to target some elements by nesting... SO COOL!! */
@@ -37,6 +41,7 @@ body {
   font-size: 16px;
   font-family: cursive;
   background-color: #fafafa;
+  font-family: 'Roboto Condensed', sans-serif;
   /*--- Header + Nav ---*/
 }
 
@@ -44,12 +49,17 @@ body main {
   background-image: url("/images/house.jpg");
   background-size: contain;
   background-position: center;
-  height: 70vh;
 }
 
 body .over {
-  background-color: rgba(101, 99, 93, 0.4);
-  height: 70vh;
+  background-color: rgba(101, 99, 93, 0.7);
+  padding-bottom: 90px;
+}
+
+@media screen and (max-width: 450px) {
+  body .over {
+    padding-bottom: 140px;
+  }
 }
 
 body header {
@@ -67,9 +77,14 @@ body header .header-container {
           justify-content: space-between;
 }
 
+body header .header-container a {
+  color: #fafafa;
+}
+
 body header .header-container #logo {
   margin: 1.6rem 0rem;
-  font-size: 18px;
+  font-size: 25px;
+  font-family: 'Patrick Hand', cursive;
 }
 
 body header .header-container #navbar ul {
@@ -90,14 +105,14 @@ body header .header-container #navbar ul li {
   margin: 1.6rem 1rem;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 880px) {
   body header .header-container #navbar ul li {
     display: none;
   }
 }
 
 body header .header-container #navbar ul li a {
-  font-size: 13px;
+  font-size: 16px;
 }
 
 body header .header-container #navbar ul #hamburger {
@@ -109,7 +124,7 @@ body header .header-container #navbar ul #hamburger {
   z-index: 2;
 }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 880px) {
   body header .header-container #navbar ul #hamburger {
     display: none;
   }
@@ -117,11 +132,11 @@ body header .header-container #navbar ul #hamburger {
 
 body header .header-container #navbar ul .bar {
   background-color: #fafafa;
-  height: 5px;
-  width: 100%;
+  height: 3px;
+  width: 85%;
   display: block;
   border-radius: 5px;
-  margin: 3px 3px 0px 0px;
+  margin: 4px 3px 0px 0px;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
@@ -141,13 +156,13 @@ body header .header-container #navbar ul .changed .bar {
 }
 
 body header .header-container #navbar ul .changed .bar-1 {
-  -webkit-transform: translateY(10px) rotate(45deg);
-          transform: translateY(10px) rotate(45deg);
+  -webkit-transform: translateY(10px) rotate(46deg);
+          transform: translateY(10px) rotate(46deg);
 }
 
 body header .header-container #navbar ul .changed .bar-3 {
-  -webkit-transform: translateY(-6px) rotate(-45deg);
-          transform: translateY(-6px) rotate(-45deg);
+  -webkit-transform: translateY(-6px) rotate(-46deg);
+          transform: translateY(-6px) rotate(-46deg);
 }
 
 body header .header-container #navbar ul .changed .bar-2 {
@@ -206,22 +221,208 @@ body header .change-bg {
 
 body #showcase {
   color: #fafafa;
-  margin-top: 35px;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 460px) {
+  body #showcase {
+    margin-top: 5px;
+  }
 }
 
 body #showcase .text-box {
-  width: 50%;
+  font-family: 'Overlock', cursive;
 }
 
 body #showcase .text-box h1 {
-  font-size: 3.2rem;
+  font-size: 2.5rem;
   text-align: left;
   line-height: 1.1;
-  font-family: 'Segoe UI','Open Sans', 'Helvetica Neue', sans-serif;
+  opacity: 0;
+  -webkit-animation: fadeUp .9s forwards;
+          animation: fadeUp .9s forwards;
+}
+
+@media screen and (max-width: 760px) {
+  body #showcase .text-box h1 {
+    font-size: 1.4rem;
+  }
 }
 
 body #showcase .text-box p {
-  margin-top: 40px;
+  margin-top: 20px;
   font-size: 14px;
+  -webkit-animation: fadeUp 1.2s forwards;
+          animation: fadeUp 1.2s forwards;
+}
+
+@media screen and (max-width: 400px) {
+  body #showcase .text-box p {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  body #showcase .text-box {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body #showcase .text-box {
+    width: 80%;
+  }
+}
+
+body #search-box {
+  border-radius: 3px;
+  margin-top: -50px;
+}
+
+@media screen and (max-width: 450px) {
+  body #search-box {
+    margin-top: -110px;
+  }
+}
+
+body #search-box #search-link {
+  margin-top: 8px;
+}
+
+body #search-box a {
+  color: #fafafa;
+}
+
+body #search-box .s-box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(30px, auto);
+  grid-gap: 20px;
+      grid-template-areas: "looking state price search-link";
+  width: 90%;
+  border: 1px solid purple;
+  padding: 30px 20px;
+  background-color: #3f373a;
+  color: #fafafa;
+  -webkit-box-shadow: 0px 3px 15px rgba(63, 55, 58, 0.4);
+          box-shadow: 0px 3px 15px rgba(63, 55, 58, 0.4);
+}
+
+body #search-box .s-box #looking {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: looking;
+}
+
+body #search-box .s-box #state {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: state;
+}
+
+body #search-box .s-box #price {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: price;
+}
+
+body #search-box .s-box #search-link {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: search-link;
+}
+
+body #search-box .s-box p {
+  font-size: 11px;
+  color: #A4a3a3;
+}
+
+body #search-box .s-box .submenu-1 {
+  display: none;
+}
+
+@media screen and (max-width: 770px) {
+  body #search-box .s-box #looking, body #search-box .s-box #state, body #search-box .s-box #price {
+    border-bottom: 1px solid #fafafa;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  body #search-box .s-box #looking, body #search-box .s-box #state, body #search-box .s-box #price {
+    width: 45.5%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body #search-box .s-box #looking, body #search-box .s-box #state, body #search-box .s-box #price {
+    width: 95%;
+  }
+}
+
+body #search-box .s-box li:hover .submenu-1 {
+  display: block;
+  position: absolute;
+  margin-left: 15px;
+  background-color: #4d4347;
+  border-radius: 5px;
+}
+
+body #search-box .s-box li:hover .submenu-1 ul {
+  margin: 10px 15px;
+}
+
+body #search-box .s-box li:hover .submenu-1 ul li {
+  width: 130px;
+  padding: 7px;
+  border-bottom: 1px solid #fafafa;
+}
+
+body #search-box .s-box li:hover .submenu-1 ul li:last-child {
+  border-bottom: none;
+}
+
+body #search-box .s-box li:hover .submenu-1 ul a:hover {
+  color: #f6cc99;
+}
+
+@media screen and (max-width: 770px) {
+  body #search-box .s-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+body #houses {
+  margin-top: 60px;
+}
+
+/*-------Animations---------*/
+@-webkit-keyframes fadeUp {
+  0% {
+    -webkit-transform: translateY(4rem);
+            transform: translateY(4rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes fadeUp {
+  0% {
+    -webkit-transform: translateY(4rem);
+            transform: translateY(4rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 /*# sourceMappingURL=style.css.map */
