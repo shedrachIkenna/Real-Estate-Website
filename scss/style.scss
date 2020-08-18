@@ -48,6 +48,9 @@ li{
     color: $brown;
 }
 
+img{
+    width: 100%;
+}
 
 // Global Classes Ends Here>>>
 
@@ -58,6 +61,7 @@ body{
     font-family:cursive;
     background-color: $white;
     font-family: 'Roboto Condensed', sans-serif;
+    overflow-x: hidden;
 
     
     /*--- Header + Nav ---*/
@@ -304,7 +308,6 @@ body{
             grid-template-areas: 
                 "looking state price search-link";
             width: 90%;
-            border: 1px solid purple;
             padding: 30px 20px;
             background-color: $dark-grey;
             color: $white;
@@ -397,7 +400,47 @@ body{
 
     
     #houses{
-        margin-top: 60px;
+        margin-top: 50px;
+
+        #recentlyAdded-header{
+
+            h3{
+                font-size: 30px;
+                margin-bottom: 10px;
+            }
+
+            p{
+                font-size: 13px;
+                margin-bottom: 20px;
+            }
+        }
+
+
+        #recentlyAdded{
+            margin-bottom: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 10px;
+
+            img{
+                height: 100%;
+                object-fit: cover;
+                transition: all 0.3s ease-out;
+                cursor: pointer;
+            }
+
+           .houses{
+
+                .imageBox{
+                    height: 45vh;
+                    overflow: hidden;
+                }
+
+                .imageBox img:hover{
+                    transform: scale(1.2);
+                }
+           }
+        }
     }
 
 }

@@ -36,12 +36,17 @@ li {
   color: #f6cc99;
 }
 
+img {
+  width: 100%;
+}
+
 /*--Note: I'm using SASS, it allows me to target some elements by nesting... SO COOL!! */
 body {
   font-size: 16px;
   font-family: cursive;
   background-color: #fafafa;
   font-family: 'Roboto Condensed', sans-serif;
+  overflow-x: hidden;
   /*--- Header + Nav ---*/
 }
 
@@ -303,7 +308,6 @@ body #search-box .s-box {
   grid-gap: 20px;
       grid-template-areas: "looking state price search-link";
   width: 90%;
-  border: 1px solid purple;
   padding: 30px 20px;
   background-color: #3f373a;
   color: #fafafa;
@@ -399,7 +403,45 @@ body #search-box .s-box li:hover .submenu-1 ul a:hover {
 }
 
 body #houses {
-  margin-top: 60px;
+  margin-top: 50px;
+}
+
+body #houses #recentlyAdded-header h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+body #houses #recentlyAdded-header p {
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+body #houses #recentlyAdded {
+  margin-bottom: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
+}
+
+body #houses #recentlyAdded img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+body #houses #recentlyAdded .houses .imageBox {
+  height: 45vh;
+  overflow: hidden;
+}
+
+body #houses #recentlyAdded .houses .imageBox img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 /*-------Animations---------*/
