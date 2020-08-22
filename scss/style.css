@@ -467,6 +467,18 @@ body #houses #recentlyAdded img {
   border-radius: 5px;
 }
 
+body #houses #recentlyAdded .glide .glide__arrow {
+  background: #fafafa;
+  border: none;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 22px;
+  color: #3f373a;
+  outline: none;
+}
+
 body #houses #recentlyAdded .houses {
   -webkit-box-shadow: 0px 3px 15px rgba(63, 55, 58, 0.1);
           box-shadow: 0px 3px 15px rgba(63, 55, 58, 0.1);

@@ -16,7 +16,7 @@ var glide = new Glide('.glide', {
         type: 'carousel',
         focusAt: 'center',
         animationDuration: 1000,
-        autoplay: 2500,
+        autoplay: 3500,
         hoverpause: false,
         perView: 3,
         peek: {

@@ -459,6 +459,24 @@ body{
                 border-radius: 5px;
             }
 
+
+            .glide{
+
+                .glide__arrow{
+                    background: $white;
+                    border: none;
+                    width: 45px;
+                    height: 45px;
+                    text-align: center;
+                    border-radius: 50%;
+                    font-size: 22px;
+                    color: $dark-grey;
+                    outline: none;
+
+                }
+
+            }
+
            .houses{
 
                 // border: 1px solid red ;
