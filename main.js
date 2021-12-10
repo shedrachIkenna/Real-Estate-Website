@@ -7,7 +7,6 @@ openMenu = () => {
 }
 
 /*--------Glide.js for the Carosel --------*/
-
 var before = document.querySelector('.glide')
 var after = document.querySelector('.glide')
 var input = document.querySelector('.glide')

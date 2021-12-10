@@ -57,7 +57,7 @@ img{
     width: 100%;
 }
 
-// Global Classes Ends Here>>>
+// Global Classes Ends Here>>
 
 /*--Note: I'm using SASS, it allows me to target some elements by nesting... SO COOL!! */
 
@@ -374,7 +374,7 @@ body{
                 @media screen and (max-width: 770px){
                     border-bottom: 1px solid $white;
                 }
-        
+
             }
 
 
@@ -397,6 +397,7 @@ body{
                 margin-left: 15px;
                 background-color: lighten($color: $dark-grey, $amount: 5);
                 border-radius: 5px;
+            
                 
 
                 ul{
@@ -569,49 +570,7 @@ body{
                 }
             }
 
-            .p-text{
-                min-height: 150px;
-                background-color: $dark-grey;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                padding: 15px 30px;
-                line-height: 1.5;
-
-                p{
-                    
-                    font-size: 20px;
-                    color: $white;
-                    margin-bottom: 20px;
-                    font-family: 'Overlock', cursive;
-
-                    @media screen and(max-width: 460px){
-                        font-size: 15px;
-                        margin-bottom: 7px
-                    }
-                }
-
-                #buy-a-home{
-                    color: $brown;
-                    
-                }
-
-                #buy-a-home:hover{
-                    color: $dark-brown;
-                }
-
-                hr{
-                    width: 40%;
-                    margin: 10px;
-                    margin-bottom: 20px;
-
-                    @media screen and(max-width: 460px){
-                        margin-bottom: 0px;
-                    }
-                }
-            }
-
+        
             .right-box-container{
                 display: grid;
                 grid-template-columns: repeat(6, 1fr);
@@ -658,6 +617,217 @@ body{
             
         }
     }
+
+
+    .p-text{
+        min-height: 150px;
+        background-color: $dark-grey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 30px;
+        line-height: 1.5;
+
+        p{
+            
+            font-size: 20px;
+            color: $white;
+            margin-bottom: 20px;
+            font-family: 'Overlock', cursive;
+
+            @media screen and(max-width: 460px){
+                font-size: 15px;
+                margin-bottom: 7px
+            }
+        }
+
+        #buy-a-home{
+            color: $brown;
+            
+        }
+
+        #buy-a-home:hover{
+            color: $dark-brown;
+        }
+
+        hr{
+            width: 40%;
+            margin: 10px;
+            margin-bottom: 20px;
+
+            @media screen and(max-width: 460px){
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+
+    #second-article-box{
+        margin-top: 25px;
+        font-family: 'Overlock', cursive;
+        // border: 1px solid red;
+
+        #sab{
+            padding: 30px 0px;
+            // border: 1px solid red;
+
+
+            @media screen and (min-width: 860px){
+                display: grid;
+                grid-template-columns: repeat(8, 1fr);
+                grid-template-rows: repeat(6, minmax(130px, auto));
+            }
+
+
+            .orange-box{
+                
+                background-color: lighten($color: $brown, $amount: 10);
+                padding: 40px 25px;
+
+                @media screen and (min-width: 860px){
+                    padding: 30px 80px;
+                    grid-column: 1/8;
+                    grid-row: 1/5;
+                }
+                
+                
+              
+
+                @media screen and (min-width: 860px){
+                    display: grid;
+                    grid-template-columns: repeat(6, 1fr);
+                    grid-gap: 15px;
+                    grid-template-rows: repeat(2, 100px);
+                    
+                }
+                
+
+                .orange-box-header{
+                    grid-column: 1/4;
+                    // border: 1px solid blue;
+                    
+
+                    h3{
+                        font-size: 27px;
+                    }
+                }
+
+                .orange-box-text{
+                    grid-column: 4/7;
+                    // border: 1px solid blue;
+
+                    p{
+                        font-size: 13px;
+                    }
+
+                    
+                }
+            }
+
+            .sab-image-box{
+                background-image: url('/images/house12.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+
+                @media screen and (min-width: 860px){
+                    grid-column: 2/9;
+                    grid-row: 2/6;
+                }
+
+            }
+
+            .sab-text-box{
+                grid-column: 5/7;
+                grid-row: 5/7;
+
+                @media screen and (min-width: 860px){
+                    .p-text{
+                        min-height: 185px;
+                        min-width: 400px;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    #newsletter{
+        margin-top: -40px;
+        font-family: 'Roboto Condensed', sans-serif;
+
+        @media screen and (max-width: 860px){
+            margin-top: 0;
+         }
+
+        .nl{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .nl-box{
+                text-align: center;
+                min-width: 500px;
+                // border: 1px solid red;
+
+                p{
+                    letter-spacing: 1px;
+                    word-spacing: 1px;
+                    padding-bottom: 10px;
+                    font-size: 14px;
+
+
+                }
+
+                h3{
+                    margin-bottom: 10px;
+                }
+
+                input{
+                    border-radius: 5px;
+                    padding: 14px 14px 12px 14px;
+                    min-width: 270px;
+                    max-width: 450px;
+                    background-color: $dark-grey;
+                    border: none;
+                    color: $white;
+                    box-shadow: 0px 3px 15px rgba($color: $dark-grey, $alpha: 0.2);
+
+                    @media screen and (max-width: 860px){
+                       font-size: 10px;
+                    }
+                }
+
+                input:focus{
+                    outline: none;
+                }
+
+                // :-ms-input-placeholder{
+                //     color: $white;
+                // }
+
+                label{
+                    margin-left: -70px;
+                    background-color: $brown;
+                    padding: 8px 14px;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    // margin-top: 10px;
+                    @media screen and (max-width: 860px){
+                        font-size: 10px;
+                        margin-left: -50px;
+                     }
+
+                     #subcribe_link:hover{
+                         color: red;
+                     }
+                }
+            }
+        }
+    }
+
 }
 
 

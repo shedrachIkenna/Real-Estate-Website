@@ -580,60 +580,6 @@ body #first-article-box .fab .left-box-container #article-text-box .p-text {
   }
 }
 
-body #first-article-box .fab .p-text {
-  min-height: 150px;
-  background-color: #3f373a;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 15px 30px;
-  line-height: 1.5;
-}
-
-body #first-article-box .fab .p-text p {
-  font-size: 20px;
-  color: #fafafa;
-  margin-bottom: 20px;
-  font-family: 'Overlock', cursive;
-}
-
-@media screen and (max-width: 460px) {
-  body #first-article-box .fab .p-text p {
-    font-size: 15px;
-    margin-bottom: 7px;
-  }
-}
-
-body #first-article-box .fab .p-text #buy-a-home {
-  color: #f6cc99;
-}
-
-body #first-article-box .fab .p-text #buy-a-home:hover {
-  color: #917D68;
-}
-
-body #first-article-box .fab .p-text hr {
-  width: 40%;
-  margin: 10px;
-  margin-bottom: 20px;
-}
-
-@media screen and (max-width: 460px) {
-  body #first-article-box .fab .p-text hr {
-    margin-bottom: 0px;
-  }
-}
-
 body #first-article-box .fab .right-box-container {
   display: -ms-grid;
   display: grid;
@@ -698,6 +644,239 @@ body #first-article-box .fab .right-box-container #right-text-box {
 body #first-article-box .fab .right-box-container #right-text-box .p-text {
   max-width: 100%;
   height: 100%;
+}
+
+body .p-text {
+  min-height: 150px;
+  background-color: #3f373a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px 30px;
+  line-height: 1.5;
+}
+
+body .p-text p {
+  font-size: 20px;
+  color: #fafafa;
+  margin-bottom: 20px;
+  font-family: 'Overlock', cursive;
+}
+
+@media screen and (max-width: 460px) {
+  body .p-text p {
+    font-size: 15px;
+    margin-bottom: 7px;
+  }
+}
+
+body .p-text #buy-a-home {
+  color: #f6cc99;
+}
+
+body .p-text #buy-a-home:hover {
+  color: #917D68;
+}
+
+body .p-text hr {
+  width: 40%;
+  margin: 10px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 460px) {
+  body .p-text hr {
+    margin-bottom: 0px;
+  }
+}
+
+body #second-article-box {
+  margin-top: 25px;
+  font-family: 'Overlock', cursive;
+}
+
+body #second-article-box #sab {
+  padding: 30px 0px;
+}
+
+@media screen and (min-width: 860px) {
+  body #second-article-box #sab {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[8];
+        grid-template-columns: repeat(8, 1fr);
+    -ms-grid-rows: (minmax(130px, auto))[6];
+        grid-template-rows: repeat(6, minmax(130px, auto));
+  }
+}
+
+body #second-article-box #sab .orange-box {
+  background-color: #fae3c8;
+  padding: 40px 25px;
+}
+
+@media screen and (min-width: 860px) {
+  body #second-article-box #sab .orange-box {
+    padding: 30px 80px;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 7;
+    grid-column: 1/8;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 4;
+    grid-row: 1/5;
+  }
+}
+
+@media screen and (min-width: 860px) {
+  body #second-article-box #sab .orange-box {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[6];
+        grid-template-columns: repeat(6, 1fr);
+    grid-gap: 15px;
+    -ms-grid-rows: (100px)[2];
+        grid-template-rows: repeat(2, 100px);
+  }
+}
+
+body #second-article-box #sab .orange-box .orange-box-header {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+}
+
+body #second-article-box #sab .orange-box .orange-box-header h3 {
+  font-size: 27px;
+}
+
+body #second-article-box #sab .orange-box .orange-box-text {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 3;
+  grid-column: 4/7;
+}
+
+body #second-article-box #sab .orange-box .orange-box-text p {
+  font-size: 13px;
+}
+
+body #second-article-box #sab .sab-image-box {
+  background-image: url("/images/house12.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media screen and (min-width: 860px) {
+  body #second-article-box #sab .sab-image-box {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 7;
+    grid-column: 2/9;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 4;
+    grid-row: 2/6;
+  }
+}
+
+body #second-article-box #sab .sab-text-box {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
+  grid-column: 5/7;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 2;
+  grid-row: 5/7;
+}
+
+@media screen and (min-width: 860px) {
+  body #second-article-box #sab .sab-text-box .p-text {
+    min-height: 185px;
+    min-width: 400px;
+  }
+}
+
+body #newsletter {
+  margin-top: -40px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+@media screen and (max-width: 860px) {
+  body #newsletter {
+    margin-top: 0;
+  }
+}
+
+body #newsletter .nl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #newsletter .nl .nl-box {
+  text-align: center;
+  min-width: 500px;
+}
+
+body #newsletter .nl .nl-box p {
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  padding-bottom: 10px;
+  font-size: 14px;
+}
+
+body #newsletter .nl .nl-box h3 {
+  margin-bottom: 10px;
+}
+
+body #newsletter .nl .nl-box input {
+  border-radius: 5px;
+  padding: 14px 14px 12px 14px;
+  min-width: 270px;
+  max-width: 450px;
+  background-color: #3f373a;
+  border: none;
+  color: #fafafa;
+  -webkit-box-shadow: 0px 3px 15px rgba(63, 55, 58, 0.2);
+          box-shadow: 0px 3px 15px rgba(63, 55, 58, 0.2);
+}
+
+@media screen and (max-width: 860px) {
+  body #newsletter .nl .nl-box input {
+    font-size: 10px;
+  }
+}
+
+body #newsletter .nl .nl-box input:focus {
+  outline: none;
+}
+
+body #newsletter .nl .nl-box label {
+  margin-left: -70px;
+  background-color: #f6cc99;
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 860px) {
+  body #newsletter .nl .nl-box label {
+    font-size: 10px;
+    margin-left: -50px;
+  }
 }
 
 /*-------Animations---------*/
